@@ -129,13 +129,13 @@ int main(int argc, char * argv[]){
     CSRmv<double, unsigned int, unsigned int>(*new_csr, new_csr->get_row_ptr(), new_csr->get_col(), new_csr->get_vals(), vector_x, vector_y_out);
     std::cout << "spmv is done\n" << std::endl;
 
-    //uncomment this part if you want to see the spmv results
-    /*
-    std::cout << "\nVector y:\n";
+    //comment this part if you test with larger matrices
+    std::cout << "\nVector y should be : [2, 8, 4] for simple.mtx\n";
+    std::cout << "\nVector y:\n[]";
     for (int row = 0; row < new_csr->get_dimensions()[0]; ++row)
         std::cout << vector_y_out[row] << " ";
-    std::cout << "\n";
-    */
+    std::cout << "]\n";
+    
     free(vector_x);
     free(vector_y_out);
     std::cout << "freed vectors" << std::endl;

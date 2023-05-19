@@ -10,7 +10,6 @@ g++ -std=c++17 ordering.cc -lsparsebase -fopenmp -lgomp -std=c++17 -o rabbit.out
 g++ -std=c++17 ordering.cc -lsparsebase -fopenmp -lgomp -std=c++17 -o generic.out -DREORDER -DGENERIC
 g++ -std=c++17 ordering.cc -lsparsebase -fopenmp -lgomp -std=c++17 -o metis.out -DREORDER -DMETIS
 
-If you would like to see the spmv results, you can uncomment the lines 133-137 in ordering.cc
 
 For simple.mtx:
 %---------------
