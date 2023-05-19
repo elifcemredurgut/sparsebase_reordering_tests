@@ -127,11 +127,11 @@ int main(int argc, char * argv[]){
     
     //Simple SPMV
     CSRmv<double, unsigned int, unsigned int>(*new_csr, new_csr->get_row_ptr(), new_csr->get_col(), new_csr->get_vals(), vector_x, vector_y_out);
-    std::cout << "spmv is done\n" << std::endl;
+    std::cout << "spmv is done" << std::endl;
 
     //comment this part if you test with larger matrices
-    std::cout << "\nVector y should be : [2, 8, 4] for simple.mtx\n";
-    std::cout << "\nVector y:\n[]";
+    std::cout << "\nFor simple.mtx, vector y should be:\n [2 8 4]\n";
+    std::cout << "Vector y:\n[";
     for (int row = 0; row < new_csr->get_dimensions()[0]; ++row)
         std::cout << vector_y_out[row] << " ";
     std::cout << "]\n";
