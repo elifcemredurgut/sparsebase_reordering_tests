@@ -130,7 +130,7 @@ int main(int argc, char * argv[]){
     std::cout << "spmv is done" << std::endl;
 
     //comment this part if you test with larger matrices
-    std::cout << "\nFor simple.mtx, vector y should be:\n [2 8 4]\n";
+    std::cout << "\nFor simple.mtx, vector y should be:\n[2 8 4 ]\n";
     std::cout << "Vector y:\n[";
     for (int row = 0; row < new_csr->get_dimensions()[0]; ++row)
         std::cout << vector_y_out[row] << " ";
