@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <vector>
-#include <sparsebase/format/format.h>
-#include <sparsebase/object/object.h>
-#include <sparsebase/preprocess/preprocess.h>
-#include <sparsebase/utils/io/reader.h>
+#include "sparsebase/format/csr.h"
 
 using namespace sparsebase;
 
@@ -12,7 +9,7 @@ template <
     typename NNZType,
     typename IDType>
 void CSRmv(
-    format::CSR<unsigned long long, unsigned long long, double>&    a,
+    format::CSR<unsigned int, unsigned int, double>&    a,
     NNZType*    __restrict           row_ptr,    ///< Merge list A (row end-offsets)
     IDType*    __restrict            cols,
     ValueType*     __restrict        vals,
