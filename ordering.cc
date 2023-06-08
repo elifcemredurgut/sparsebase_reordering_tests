@@ -105,7 +105,7 @@ int main(int argc, char * argv[]){
     #endif
 
     //Merge-base SPMV
-    //OmpMergeCsrmv<value_type, nnz_type, id_type>(1, *new_csr, new_csr->get_row_ptr(), new_csr->get_col(), new_csr->get_vals(), vec, vector_y_out);
+    //OmpMergeCsrmv<value_type, nnz_type, id_type>(1, *new_csr, new_csr->get_row_ptr(), new_csr->get_col(), new_csr->get_vals(), *vec, vector_y_out);
     
     //Simple SPMV
     CSRmv<id_type, nnz_type, value_type>(*new_csr, new_csr->get_row_ptr(), new_csr->get_col(), new_csr->get_vals(), *vec, vector_y_out);

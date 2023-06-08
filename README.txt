@@ -4,6 +4,7 @@ make
 ./degree.out simple.mtx
 ./rcm.out simple.mtx
 ./gray.out simple.mtx
+./none.out simple.mtx
 
 Some of the orderings do not compile. If you would like to test them, you can run the following commands:
 g++ -std=c++17 ordering.cc -lsparsebase -fopenmp -lgomp -std=c++17 -o rabbit.out -DREORDER -DRABBIT
@@ -20,7 +21,7 @@ simple.mtx                                         | simple2.mtx:
 
             with simple.mtx                        |     with simple2.mtx
 rcm     --> compiles but wrong spmv result [4,2,2] | --> compiles but wrong spmv result  [9,5,14,3]
-degree  --> compiles but wrong spmv result [4,8,2] | --> compiles but segmentation fault 
+degree  --> compiles but wrong spmv result [4,8,2] | --> compiles but segmentation fault during the ordering
 gray    --> compiles, correct              [2,8,4] | --> compiles but wrong spmv result  [14,9,5,3]
 rabbit  --> does not compile                       |
 generic --> does not compile                       |
